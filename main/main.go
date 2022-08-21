@@ -10,7 +10,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/joho/godotenv"
 )
 
 func Homepage(ctx *gin.Context) {
@@ -57,7 +56,7 @@ func CreateLink(ctx *gin.Context) {
 }
 
 func main() {
-	godotenv.Load(".env")
+	//godotenv.Load(".env")
 	database.Connect()
 
 	r := gin.Default()
