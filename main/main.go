@@ -20,7 +20,7 @@ func Homepage(ctx *gin.Context) {
 func RedirectToURL(ctx *gin.Context) {
 	id_b64 := ctx.Param("id")
 	var link database.Link
-	bDec, err := b64.URLEncoding.DecodeString(id_b64)
+	bDec, err := b64.RawURLEncoding.DecodeString(id_b64)
 
 	if err != nil {
 		log.Default().Print(err)
@@ -49,7 +49,7 @@ func CreateLink(ctx *gin.Context) {
 	if err != nil {
 		log.Default().Print(err)
 	}
-	sEnc := b64.URLEncoding.EncodeToString(bytes)
+	sEnc := b64.RawURLEncoding.EncodeToString(bytes)
 	//log.Default().Print(ctx.Request.Host + "/" + sEnc)
 
 	ctx.HTML(http.StatusOK, "showURL.tmpl", gin.H{"url": ctx.Request.Host + "/" + url.QueryEscape(sEnc)})
