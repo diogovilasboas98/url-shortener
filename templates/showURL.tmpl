@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Link Shortner </title>
+</head>
+<body>
+    
+    <div class="p-4 m-auto w-fit mt-6 rounded border border-gray-800" action="/" method="post">
+        <h1 class="text-center">Link Shortener</h1>
+        <div class="flex flex-row">
+            <label for="url">URL:</label> 
+            <div class="px-2"> {{ .url }} </div>
+        </div>
+    </div>
+</body>
+</html>

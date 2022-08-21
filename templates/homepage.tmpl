@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Link Shortner </title>
+</head>
+<body>
+    
+    <form class="p-4 m-auto w-fit mt-6 rounded border border-gray-800" action="/" method="post">
+        <h1 class="text-center">Link Shortener</h1>
+        <label for="url">URL:</label>
+        <input class="rounded border border-gray-800" name="URL" pattern="(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?" value="" placeholder="Write your URL here" type="text" required/>
+        <button class="bg-blue-700 text-white px-2 rounded mt-2"> Generate short URL</button>
+    </form>
+</body>
+</html>
